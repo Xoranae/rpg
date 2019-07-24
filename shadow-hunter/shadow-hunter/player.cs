@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace shadowhunter
+namespace shadow_hunter
 {
     public class player
     {
