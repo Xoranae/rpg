@@ -1,0 +1,11 @@
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\obj\Debug\netcoreapp2.2\elo-class.csprojAssemblyReference.cache
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\obj\Debug\netcoreapp2.2\elo-class.csproj.CoreCompileInputs.cache
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\obj\Debug\netcoreapp2.2\elo-class.AssemblyInfoInputs.cache
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\obj\Debug\netcoreapp2.2\elo-class.AssemblyInfo.cs
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\bin\Debug\netcoreapp2.2\elo-class.deps.json
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\bin\Debug\netcoreapp2.2\elo-class.runtimeconfig.json
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\bin\Debug\netcoreapp2.2\elo-class.runtimeconfig.dev.json
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\bin\Debug\netcoreapp2.2\elo-class.dll
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\bin\Debug\netcoreapp2.2\elo-class.pdb
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\obj\Debug\netcoreapp2.2\elo-class.dll
+C:\Users\MaximeEhanno\source\repos\elo-class\elo-class\obj\Debug\netcoreapp2.2\elo-class.pdb
