@@ -9,3 +9,13 @@ C:\Users\ElodieMarquez\Documents\Personnel\C#\rpg\shadow-hunter\shadow-hunter\ob
 C:\Users\ElodieMarquez\Documents\Personnel\C#\rpg\shadow-hunter\shadow-hunter\obj\Debug\netcoreapp2.2\shadow-hunter.AssemblyInfo.cs
 C:\Users\ElodieMarquez\Documents\Personnel\C#\rpg\shadow-hunter\shadow-hunter\obj\Debug\netcoreapp2.2\shadow-hunter.dll
 C:\Users\ElodieMarquez\Documents\Personnel\C#\rpg\shadow-hunter\shadow-hunter\obj\Debug\netcoreapp2.2\shadow-hunter.pdb
+D:\Code\RPG\shadow-hunter\shadow-hunter\obj\Debug\netcoreapp2.2\shadow-hunter.csproj.CoreCompileInputs.cache
+D:\Code\RPG\shadow-hunter\shadow-hunter\obj\Debug\netcoreapp2.2\shadow-hunter.AssemblyInfoInputs.cache
+D:\Code\RPG\shadow-hunter\shadow-hunter\obj\Debug\netcoreapp2.2\shadow-hunter.AssemblyInfo.cs
+D:\Code\RPG\shadow-hunter\shadow-hunter\bin\Debug\netcoreapp2.2\shadow-hunter.deps.json
+D:\Code\RPG\shadow-hunter\shadow-hunter\bin\Debug\netcoreapp2.2\shadow-hunter.runtimeconfig.json
+D:\Code\RPG\shadow-hunter\shadow-hunter\bin\Debug\netcoreapp2.2\shadow-hunter.runtimeconfig.dev.json
+D:\Code\RPG\shadow-hunter\shadow-hunter\bin\Debug\netcoreapp2.2\shadow-hunter.dll
+D:\Code\RPG\shadow-hunter\shadow-hunter\bin\Debug\netcoreapp2.2\shadow-hunter.pdb
+D:\Code\RPG\shadow-hunter\shadow-hunter\obj\Debug\netcoreapp2.2\shadow-hunter.dll
+D:\Code\RPG\shadow-hunter\shadow-hunter\obj\Debug\netcoreapp2.2\shadow-hunter.pdb
