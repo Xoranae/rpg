@@ -18,7 +18,7 @@ namespace shadow_hunter
         public static List<string> victory_condition = new List<string>();
 
 
-        public static void init()
+        public static void Init()
         {
             teams.Add("hunter"); // 0
             teams.Add("shadow"); // 1
@@ -77,5 +77,46 @@ namespace shadow_hunter
         public string _description { get; set; }
         public bool _revealed { get; set; }
         public string _victoryCondition { get; set; }
+
+        public static void Characters_generation(int nbplayer) // Génération des personnages
+        {
+            Character.Init();
+
+            HunterCharacters = new List<Character>()
+            {
+                new Character("Emi", Character.teams[0], 10, "Téléportation", "Pour vous déplacer, vous pouvez lancer normalement les dés, ou vous déplacer sur la carte lieu adjacente."),
+                new Character("Georges", Character.teams[0], 14, "Démolition", "Au début de votre tour, choisissez un joueur et infligez-lui autant de Blessures que le résultat d'un dés à 4 faces - Utilisation unique."),
+                new Character("Franklin", Character.teams[0], 12, "Foudre", "Au début de votre tour, choisissez un joueur et infligez-lui autant de Blessures que le résultat d'un dés à 6 faces - Utilisation unique.")
+            };
+
+            ShadowCharacters = new List<Character>()
+            {
+                new Character("Loup-Garou", Character.teams[1], 14, "Contre-attaque", "Quand vous êtes attaquez par un joueur, vous pouvez choisir de contre-attaquer juste après que l'attaque initiale a été résolue. Vous pouvez révéler votre identité après avoir été attaqué pour effectuer la contre attaque. Quand vous contre-attaquez, vos équipements ne compte pas."),
+                new Character("Vampire", Character.teams[1], 13, "Morsure", "Si vous portez une attaque qui inflige des dommages, soignez immédiatement 2 de vos Blessures."),
+                new Character("Métamorphe", Character.teams[1], 11, "Imitation", "Vous pouvez mentir (sans avoir à révélez votre identité) lorsqu'on vous donne une carte Vision.")
+
+            };
+
+            NeutreCharacters = new List<Character>()
+            {
+                new Character("Allie", Character.teams[2], 8, "Amour Maternel", "Soignez toutes vos Blessures - Utilisation unique."),
+                new Character("Bob", Character.teams[2], 10, "Braquage", "Si vous infligez au moins 2 Blessures à un autre personnage lors d'une attaque, vous pouvez lui voler une de ses cartes Equipement à la place de lui infliger les Blessures."),
+                new Character("Daniel", Character.teams[2], 13, "Désespoir", "Dès qu'un personnage meurt, vous devez révéler votre identité.")
+            };
+
+            // 6 joueurs ou plus pour l'apparition
+            if (nbplayer >= 6)
+            {
+                NeutreCharacters.Add(new Character("Charles", Character.teams[2], 11, "Festin Sanglant", "Après votre attaque, vous pouvez vous infliger 2 Blessures afin d'attaquer de nouveau le même joueur."));
+            }
+
+        }
+
+        public static List<Character> HunterCharacters { get; set; }
+        public static List<Character> ShadowCharacters { get; set; }
+        public static List<Character> NeutreCharacters { get; set; }
+
+        
     }
 }
+

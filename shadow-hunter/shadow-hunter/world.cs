@@ -26,5 +26,20 @@ namespace shadow_hunter
             _value2 = 0;
             _description = description;
         }
+        public static List<World> Worlds { get; set; }
+
+        public static void Worldgeneration()
+        {
+            Worlds = new List<World>
+            {
+                new World("Antre de l'Ermite", 2, 3, "Vous pouvez piocher une carte vision."),
+                new World("Porte de l'Outre Monde", 4, 5, "Vous pouvez piocher une carte de la pile de votre choix."),
+                new World("Monastère", 6, "Vous pouvez piocher une carte Lumière."),
+                new World("Cimetière", 8, "Vous pouvez piocher une carte Ténèbre."),
+                new World("Forêt Hantée", 9, "Le joueur de votre choix peut subir 2 Blessures OU soigner 1 Blessure."),
+                new World("Sanctuaire Ancien", 10, "Vous pouvez voler une carte équipement à un autre joueur.")
+            };
+        }
+
     }
 }

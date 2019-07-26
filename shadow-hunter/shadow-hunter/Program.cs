@@ -1,23 +1,24 @@
 ﻿using OfficeOpenXml.FormulaParsing.Excel.Functions.Information;
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace shadow_hunter
 {
     class Program
     {
-        public static void Display()
-        {
-            Console.WriteLine("  _____   _   _       ___   _____   _____   _          __       _   _   _   _   __   _   _____   _____   _____    _____  ");
-            Console.WriteLine(" /  ___/ | | | |     /   | |  _  \\ /  _  \\ | |        / /      | | | | | | | | |  \\ | | |_   _| | ____| |  _  \\  /  ___/ ");
-            Console.WriteLine(" | |___  | |_| |    / /| | | | | | | | | | | |  __   / /       | |_| | | | | | |   \\| |   | |   | |__   | |_| |  | |___  ");
-            Console.WriteLine(" \\___  \\ |  _  |   / / | | | | | | | | | | | | /  | / /        |  _  | | | | | | |\\   |   | |   |  __|  |  _  /  \\___  \\ ");
-            Console.WriteLine("  ___| | | | | |  / /  | | | |_| | | |_| | | |/   |/ /         | | | | | |_| | | | \\  |   | |   | |___  | | \\ \\   ___| | ");
-            Console.WriteLine(" /_____/ |_| |_| /_/   |_| |_____/ \\_____/ |___/|___/          |_| |_| \\_____/ |_|  \\_|   |_|   |_____| |_|  \\_\\ /_____/ ");
-        }
+
         
 
+
         // ------------------------ Jet de dés -------------------------------- //
+        
+        public static int Random(int min, int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max);
+        }
+
         public int JetDesMove()
         {
             return JetDes4() + JetDes6();
@@ -47,63 +48,72 @@ namespace shadow_hunter
 
         public int JetDes4()
         {
-            Random random = new Random();
-            return random.Next(1, 4);
+            
+            return Random(1, 4);
         }
 
         public int JetDes6()
         {
-            Random random = new Random();
-            return random.Next(1, 6);
+            return Random(1, 6);
         }
 
         // ------------------------------------------------------------------------------------
 
-            ///
-        public static void Characters_generation()
+        public static List<Character> PartyCharacters { get; set; }
+
+
+        public static void RandomAttributionCharacters(int nbplayer)
         {
-            List<Character> characters = new List<Character>();
-            Character.init();
+            PartyCharacters = new List<Character>();
 
-            characters.Add(new Character("Emi", Character.teams[0], 10, "Téléportation", "Pour vous déplacer, vous pouvez lancer normalement les dés, ou vous déplacer sur la carte lieu adjacente."));
-            characters.Add(new Character("Georges", Character.teams[0], 14, "Démolition", "Au début de votre tour, choisissez un joueur et infligez-lui autant de Blessures que le résultat d'un dés à 4 faces - Utilisation unique."));
-            characters.Add(new Character("Franklin", Character.teams[0], 12, "Foudre", "Au début de votre tour, choisissez un joueur et infligez-lui autant de Blessures que le résultat d'un dés à 6 faces - Utilisation unique."));
+            Character.Characters_generation(nbplayer);
 
-            characters.Add(new Character("Loup-Garou", Character.teams[1], 14, "Contre-attaque", "Quand vous êtes attaquez par un joueur, vous pouvez choisir de contre-attaquer juste après que l'attaque initiale a été résolue. Vous pouvez révéler votre identité après avoir été attaqué pour effectuer la contre attaque. Quand vous contre-attaquez, vos équipements ne compte pas."));
-            characters.Add(new Character("Vampire", Character.teams[1], 13, "Morsure", "Si vous portez une attaque qui inflige des dommages, soignez immédiatement 2 de vos Blessures."));
-            characters.Add(new Character("Métamorphe", Character.teams[1], 11, "Imitation", "Vous pouvez mentir (sans avoir à révélez votre identité) lorsqu'on vous donne une carte Vision."));
-            
-            characters.Add(new Character("Allie", Character.teams[2], 8, "Amour Maternel", "Soignez toutes vos Blessures - Utilisation unique."));
-            characters.Add(new Character("Bob", Character.teams[2], 10, "Braquage", "Si vous infligez au moins 2 Blessures à un autre personnage lors d'une attaque, vous pouvez lui voler une de ses cartes Equipement à la place de lui infliger les Blessures."));
-            characters.Add(new Character("Charles", Character.teams[2], 11, "Festin Sanglant", "Après votre attaque, vous pouvez vous infliger 2 Blessures afin d'attaquer de nouveau le même joueur."));
-            characters.Add(new Character("Daniel", Character.teams[2], 13, "Désespoir", "Dès qu'un personnage meurt, vous devez révéler votre identité."));
-
-        }
-
-        public static void Worldgeneration()
-        {
-            List<World> World = new List<World>
+            switch (nbplayer)
             {
-                new World("Antre de l'Ermite", 2, 3, "Vous pouvez piocher une carte vision."),
-                new World("Porte de l'Outre Monde", 4, 5, "Vous pouvez piocher une carte de la pile de votre choix."),
-                new World("Monastère", 6, "Vous pouvez piocher une carte Lumière."),
-                new World("Cimetière", 8, "Vous pouvez piocher une carte Ténèbre."),
-                new World("Forêt Hantée", 9, "Le joueur de votre choix peut subir 2 Blessures OU soigner 1 Blessure."),
-                new World("Sanctuaire Ancien", 10, "Vous pouvez voler une carte équipement à un autre joueur.")
-            };
-        }
+                // 2 Shadows + 2 Hunters
+                case 4:
+                    for (int i = 0; i < 2; i++)
+                    {
+                        int n = Random(0, (Character.HunterCharacters.Count - 1));
+                        PartyCharacters.Add(Character.HunterCharacters[n]);
+                        Character.HunterCharacters.RemoveAt(n);
+                    }
+                    for (int i = 0; i < 2; i++)
+                    {
+                        int n = Random(0, (Character.ShadowCharacters.Count - 1));
+                        PartyCharacters.Add(Character.ShadowCharacters[n]);
+                        Character.ShadowCharacters.RemoveAt(n);
+                    }
+                    break;
 
+            }
+        }
 
 
         public static void Main()
         {
-            Display();
+            img.DisplayBegin(); // Dessin ASCII SHADOW HUNTERS
 
-            Characters_generation();
-            Worldgeneration();
+            int a = Player.ValidNumberPlayer();
+            Console.WriteLine("La partie sera composée de " + a + " joueurs."); // Annonce du nombre de joueurs
+            RandomAttributionCharacters(a);
+            int i = 0;
+            while( i < 15)
+            {
+                RandomAttributionCharacters(a);
+                foreach (Character character in PartyCharacters)
+                {
+                    Console.WriteLine(character._name);
+                    Console.WriteLine("");
+                }
+                i++;
+            }
+            
+            
+
+            World.Worldgeneration();
         }
 
 
-        //Console.ReadLine();
     }
 }

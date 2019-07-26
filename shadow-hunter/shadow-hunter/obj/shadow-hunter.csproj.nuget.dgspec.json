@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code\\RPG\\shadow-hunter\\shadow-hunter\\shadow-hunter.csproj": {}
+    "C:\\Users\\ElodieMarquez\\Documents\\Personnel\\C#\\rpg\\shadow-hunter\\shadow-hunter\\shadow-hunter.csproj": {}
   },
   "projects": {
-    "D:\\Code\\RPG\\shadow-hunter\\shadow-hunter\\shadow-hunter.csproj": {
+    "C:\\Users\\ElodieMarquez\\Documents\\Personnel\\C#\\rpg\\shadow-hunter\\shadow-hunter\\shadow-hunter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\RPG\\shadow-hunter\\shadow-hunter\\shadow-hunter.csproj",
+        "projectUniqueName": "C:\\Users\\ElodieMarquez\\Documents\\Personnel\\C#\\rpg\\shadow-hunter\\shadow-hunter\\shadow-hunter.csproj",
         "projectName": "shadow-hunter",
-        "projectPath": "D:\\Code\\RPG\\shadow-hunter\\shadow-hunter\\shadow-hunter.csproj",
-        "packagesPath": "C:\\Users\\Elodie-Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\RPG\\shadow-hunter\\shadow-hunter\\obj\\",
+        "projectPath": "C:\\Users\\ElodieMarquez\\Documents\\Personnel\\C#\\rpg\\shadow-hunter\\shadow-hunter\\shadow-hunter.csproj",
+        "packagesPath": "C:\\Users\\ElodieMarquez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ElodieMarquez\\Documents\\Personnel\\C#\\rpg\\shadow-hunter\\shadow-hunter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Elodie-Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ElodieMarquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
